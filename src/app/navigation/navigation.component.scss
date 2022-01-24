@@ -1,0 +1,17 @@
+:host {
+	display: flex;
+	flex-flow: column;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+}
+.menu {
+	display: flex;
+	flex-flow: column;
+}
+.footer {
+	display: flex;
+	align-items: center;
+}

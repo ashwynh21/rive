@@ -1,8 +1,25 @@
 :host {
 	display: flex;
+	height: 100%;
 
 	> div {
+		flex: 1;
 		display: flex;
 		flex-flow: column;
 	}
+}
+
+app-navigation {
+	display: flex;
+	flex-flow: column;
+
+	// we set the navigation to have a minimum width of 256px
+	min-width: 256px;
+	height: 100%;
+}
+app-toolbar {
+	min-height: 48px;
+}
+app-content {
+	flex: 1;
 }

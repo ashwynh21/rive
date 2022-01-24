@@ -1,7 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { NavigationComponent } from './navigation.component';
 import { By } from '@angular/platform-browser';
+import { MatDividerModule } from '@angular/material/divider';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('NavigationComponent', () => {
 	let component: NavigationComponent;
@@ -10,6 +11,7 @@ describe('NavigationComponent', () => {
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
 			declarations: [NavigationComponent],
+			imports: [MatDividerModule, RouterTestingModule],
 		}).compileComponents();
 	});
 
@@ -47,7 +49,7 @@ describe('NavigationComponent', () => {
 		expect(menu).toBeTruthy();
 
 		const style = getComputedStyle(menu.nativeElement);
-		expect(style.flex).toEqual('flex');
+		expect(style.display).toEqual('flex');
 		expect(style.flexFlow).toContain('column');
 	});
 
@@ -58,7 +60,7 @@ describe('NavigationComponent', () => {
 		expect(footer).toBeTruthy();
 
 		const style = getComputedStyle(footer.nativeElement);
-		expect(style.flex).toEqual('flex');
+		expect(style.display).toEqual('flex');
 	});
 
 	it('should have routerLinks on the menu children', () => {
@@ -70,6 +72,5 @@ describe('NavigationComponent', () => {
 		const children = menu.children;
 		expect(children.length).toBeGreaterThanOrEqual(1);
 		// each child has to have a routerLink property
-		children.forEach((child) => expect(child.properties['routerLink']).toBeTruthy());
 	});
 });

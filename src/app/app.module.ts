@@ -6,10 +6,12 @@ import { RiveModule } from 'ng-rive';
 import { NavigationComponent } from './navigation/navigation.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ContentComponent } from './content/content.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
 	declarations: [AppComponent, NavigationComponent, ToolbarComponent, ContentComponent],
-	imports: [BrowserModule, BrowserAnimationsModule, RiveModule],
+	imports: [BrowserModule, BrowserAnimationsModule, RiveModule, MatDividerModule, RouterModule.forRoot([])],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}
