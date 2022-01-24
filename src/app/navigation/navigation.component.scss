@@ -13,21 +13,38 @@
 	padding: 0 24px;
 
 	box-shadow: 0 0 4px 1px #0001;
+	background: #888;
+	gap: 12px;
+	cursor: pointer;
 
 	> p {
 		margin: 0;
+		color: white;
 		font-size: 12pt;
-		color: #888;
+	}
+	> img {
+		padding: 8px;
 	}
 }
 .menu {
 	display: flex;
 	flex-flow: column;
+	margin-top: 12px;
 
 	// since each child of the menu is a link we are going to need to keep this in mind
 	> div {
 		cursor: pointer;
 		padding: 12px 24px;
+
+		display: flex;
+		align-items: center;
+		gap: 12px;
+
+		color: #4f1192;
+
+		> p {
+			margin: 0;
+		}
 	}
 }
 .footer {

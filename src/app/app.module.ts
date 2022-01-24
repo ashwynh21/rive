@@ -1,3 +1,5 @@
+import routes from './app.routes';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -9,6 +11,7 @@ import { ContentComponent } from './content/content.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { RouterModule } from '@angular/router';
 import { MatRippleModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
 	declarations: [AppComponent, NavigationComponent, ToolbarComponent, ContentComponent],
@@ -18,7 +21,8 @@ import { MatRippleModule } from '@angular/material/core';
 		RiveModule,
 		MatDividerModule,
 		MatRippleModule,
-		RouterModule.forRoot([]),
+		MatIconModule,
+		RouterModule.forRoot(routes),
 	],
 	bootstrap: [AppComponent],
 })

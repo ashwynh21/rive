@@ -1,1 +1,34 @@
-<p>rive works!</p>
+<div class='list'>
+	<p>Rive Animations</p>
+	<mat-divider></mat-divider>
+	<div class='container'>
+		<div *ngFor='let animation of animations; let i = index' [class.selected]='i == selected' class='animation' matRipple (click)='onselect(i)'>
+			<mat-icon>{{ animation.icon }}</mat-icon>
+			<p>{{ animation.name }}</p>
+		</div>
+	</div>
+
+	<div class='footer'>
+		<mat-divider></mat-divider>
+		<p>Select the animation that you would like to render.</p>
+	</div>
+</div>
+<div class='canvas'>
+	<!-- here we are going to display the canvas and any control animations that the app would come with -->
+	<canvas [riv]="animations[selected].url" width="1280" height="720">
+		<riv-animation name="Animation 1" play></riv-animation>
+	</canvas>
+
+	<!-- we define a control section over here so that the user can select the animations that they want to play -->
+	<div class='controls'>
+		<div>
+			<p>Select an animation to play</p>
+			<button mat-icon-button><mat-icon>expand_less</mat-icon></button>
+		</div>
+		<mat-divider></mat-divider>
+
+		<div class='configurations'>
+
+		</div>
+	</div>
+</div>

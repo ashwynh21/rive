@@ -1,0 +1,120 @@
+:host {
+	display: flex;
+	align-items: center;
+	padding: 24px;
+	gap: 24px;
+
+	height: 100%;
+	background: #888;
+}
+
+.list {
+	min-width: 480px;
+	height: 100%;
+	flex: 1;
+	background: white;
+
+	border-radius: 6px;
+	box-shadow: 0 0 4px 1px #0001;
+	overflow: hidden;
+
+	display: flex;
+	flex-flow: column;
+
+	> p {
+		padding: 12px 24px;
+		background: #4f1192;
+		color: white;
+		margin: 0;
+
+		box-shadow: 0 0 2px 1px #001;
+	}
+	> mat-divider {
+		background: #0001;
+		border-color: #0001;
+		margin: 0;
+	}
+}
+.canvas {
+	min-width: 480px;
+	height: 100%;
+	flex: 1;
+	background: white;
+	position: relative;
+
+	border-radius: 6px;
+	box-shadow: 0 0 4px 1px #0001;
+	overflow: hidden;
+
+	> canvas {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+.container {
+	display: flex;
+	flex-flow: column;
+	width: 100%;
+}
+.animation {
+	display: flex;
+	padding: 12px;
+	gap: 8px;
+	margin: 12px;
+
+	border: 1px solid #4f119244;
+	border-radius: 8px;
+	cursor: pointer;
+	box-shadow: 0 0 4px 1px #4f119211;
+
+	> mat-icon {
+		color: #4f1192;
+	}
+	> p {
+		margin: 0;
+		font-size: 12pt;
+		color: #4f1192;
+	}
+}
+
+.selected {
+	background: #4f119211;
+}
+
+.footer {
+	margin-top: auto;
+
+	> p {
+		margin: 12px;
+		text-align: center;
+		font-size: 9pt;
+		color: #4f1192AA;
+	}
+}
+
+.controls {
+	width: 100%;
+	background: white;
+
+	position: absolute;
+	bottom: 0;
+	box-shadow: 0 0 4px 1px #4f119211;
+	border-radius: 8px;
+
+	> div:first-child {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		> p {
+			margin: 12px 24px;
+			margin-right: 4px;
+			color: #4f1192;
+			text-align: center;
+		}
+		> button {
+			color: #4f1192;
+		}
+	}
+}

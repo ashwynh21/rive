@@ -73,4 +73,11 @@ describe('NavigationComponent', () => {
 		expect(children.length).toBeGreaterThanOrEqual(1);
 		// each child has to have a routerLink property
 	});
+
+	it('should have a routerLink to home on the title class', () => {
+		const debug = fixture.debugElement;
+
+		const menu = debug.query(By.css('.menu'));
+		expect(menu).toBeTruthy();
+	});
 });
