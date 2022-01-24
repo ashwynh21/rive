@@ -8,10 +8,18 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ContentComponent } from './content/content.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { RouterModule } from '@angular/router';
+import { MatRippleModule } from '@angular/material/core';
 
 @NgModule({
 	declarations: [AppComponent, NavigationComponent, ToolbarComponent, ContentComponent],
-	imports: [BrowserModule, BrowserAnimationsModule, RiveModule, MatDividerModule, RouterModule.forRoot([])],
+	imports: [
+		BrowserModule,
+		BrowserAnimationsModule,
+		RiveModule,
+		MatDividerModule,
+		MatRippleModule,
+		RouterModule.forRoot([]),
+	],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}

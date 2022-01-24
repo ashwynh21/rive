@@ -16,6 +16,9 @@ app-navigation {
 	// we set the navigation to have a minimum width of 256px
 	min-width: 256px;
 	height: 100%;
+
+	// then we add some of the styling that is going to be needed
+	box-shadow: 0 0 4px 1px #0001;
 }
 app-toolbar {
 	min-height: 48px;
